@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+
+:root {
+  --red: #B11313;
+  --blue: #275086;
+  --dark-grey: #323232;
+  --light-grey: #666;
+}
+
+body {
+  font-family: 'Freeman', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  height: 100%;
+}
+
+.response-message {
+  color: white;
+  text-align: center;
+  display: none;
+}
+
+.response-message.active {
+  display: block;
+}

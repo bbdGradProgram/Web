@@ -1,0 +1,361 @@
+@import url('../css/main.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.home-container {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "image image content"
+        "image image footer";
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-columns: 1fr 1fr 4fr;
+}
+
+.home-background {
+    z-index: -1;
+    grid-column: 2 / 4;
+    grid-row: header / footer;
+    color: white;
+    border-top-left-radius: 50vh;
+    background: conic-gradient(var(--blue) 0deg 101deg, var(--red) 101deg 281deg, var(--blue) 281deg 360deg);
+}
+
+.home-footer {
+    text-align: center;
+    color: white;
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    font-style: italic;
+    padding: 1.5em 3em;
+}
+
+.home-content {
+    color: white;
+    grid-column: 2 / 4;
+    grid-row: image / content;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.home-title {
+    font-size: 8rem;
+}
+
+.home-subtitle {
+    font-size: 3.5rem;
+}
+
+.home-description {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.github-login-button {
+    font-weight: 600;
+    border: none;
+    border-radius: 2em;
+    display: flex;
+    padding: 0.75em;
+    font-size: 1.25em;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--red);
+    width: 15em;
+    cursor: pointer;
+}
+
+.github-logo {
+    color: black;
+    height: 2em;
+    width: 2em;
+}
+
+.home-header {
+    color: white;
+    display: flex;
+    align-items: center;
+    grid-area: header;
+    justify-content: flex-end;
+}
+
+.spiderman-image-container {
+    grid-area: image;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.spiderman-image {
+    height: 100%;
+}
+
+.blue-overlay-image-container {
+    z-index: -1;
+    grid-column: 3 / 4;
+    grid-row: header / footer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.spiderman-image-overlay {
+    max-height: 100%;
+    max-width: 100%;
+    opacity: 0.2;
+}
+
+.about-button {
+    border: none;
+    height: 6em;
+    width: 6em;
+    border-radius: 5em;
+    padding: 0.75em;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.about-image {
+    height: 4em;
+}
+
+.about-button:hover {
+    .about-image {
+        height: 3.5em;
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.about {
+    z-index: -5;
+    grid-row: header / footer;
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-areas:
+        "close title"
+        "text text"
+        "nothing logo";
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--red);
+    color: white;
+    padding: 1em;
+    opacity: 0;
+}
+
+.about.active {
+    z-index: 1;
+    opacity: 0.9;
+    transition: opacity 0.1s ease-in;
+}
+
+.about-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: close / title;
+    grid-row: 1 / 2;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.about-text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    grid-column: 1 / 3;
+    grid-row: text / logo;
+    text-align: center;
+    padding: 0 2em;
+    font-size: 2.5rem;
+}
+
+.close-about-button-container {
+    grid-area: close;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.close-about-button {
+    z-index: 1;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.close-icon {
+    height: 2em;
+}
+
+.spider-man-logo-container {
+    z-index: -1;
+    grid-area: logo;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.spider-man-logo {
+    height: 5em;
+}
+
+@media screen and (max-width: 81.25em) {
+    .home-container {
+        grid-template-areas:
+        "header header header"
+        "content content content"
+        "footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .home-background {
+        grid-column: 1 / 4;
+        border-top-left-radius: 0;
+    }
+
+    .home-content {
+        grid-area: content;
+    }
+
+    .blue-overlay-image-container {
+        grid-column: 1 / 4;
+    }
+
+    .spiderman-image-container {
+        display: none;
+    }
+
+    .home-footer {
+        justify-content: center;
+        padding: 1.5em 0;
+    }
+
+    .about-title {
+        font-size: 4.25rem;
+    }
+
+    .about-text {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 50em) {
+    .home-title {
+        font-size: 5rem;
+    }
+
+    .home-subtitle {
+        font-size: 2.5rem;
+    }
+
+    .home-description {
+        padding: 0 0.5em;
+    }
+
+    .about-title {
+        font-size: 3.5em;
+    }
+
+    .about-text {
+        padding: 1.5em;
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (max-width: 31.25em) {
+    .blue-overlay-image-container {
+        justify-content: center;
+    }
+
+    .home-title {
+        font-size: 3.5rem;
+    }
+
+    .home-subtitle {
+        font-size: 2rem;
+    }
+
+    .home-description {
+        font-size: 1.25rem;
+    }
+
+    .home-footer {
+        font-size: 1.25em;
+    }
+
+    .github-login-button {
+        width: 12em;
+    }
+
+    .github-logo {
+        height: 1.5em;
+        width: 1.5em;
+    }
+
+    .about-title {
+        font-size: 3rem;
+    }
+
+    .about-text {
+        padding: 0 1em;
+        font-size: 1.5rem;
+    }
+}

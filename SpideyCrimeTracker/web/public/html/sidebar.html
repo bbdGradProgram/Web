@@ -1,0 +1,48 @@
+<nav class="sidebar">
+    <section class="top">
+        <section class="logo">
+            <img src="../images/spiderman.jpg">
+            <span class="title">Menu</span>
+        </section>
+        <section class="btn" onclick="toggleSidebar()">
+            <section class="bar1"></section>
+            <section class="bar2"></section>
+            <section class="bar3"></section>
+        </section>
+    </section>
+    <section>
+        <ul id="sidebar-list">
+            <li>
+                <a onclick="router('/report')">
+                    <img class="user-icon" src="../images/spyware.jpg">
+                    <span class="nav-item">Report a crime</span>
+                </a>
+                <span class="tooltip">Report a crime</span>
+            </li>
+
+            <li>
+                <a onclick="router('/statistics')">
+                    <img class="user-icon" src="../images/web.jpg">
+                    <span class="nav-item">View Statistics</span>
+                </a>
+                <span class="tooltip">View Statistics</span>
+            </li>
+
+            <li>
+                <a onclick="router('/recent')">
+                    <img class="user-icon" src="../images/investigation.jpg">
+                    <span class="nav-item">View recent crimes</span>
+                </a>
+                <span class="tooltip">View recent crimes</span>
+            </li>
+
+            <li>
+                <a id="logout-btn">
+                    <img class="user-icon" src="../images/logout.jpg">
+                    <span class="nav-item">Logout</span>
+                </a>
+                <span class="tooltip">Logout</span>
+            </li>
+        </ul>
+    </section>
+</nav>

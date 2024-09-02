@@ -1,0 +1,87 @@
+@import url('../css/main.css');
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+
+body {
+    background-image: url('../images/spiderman-swing-wallpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+header {
+    font-family: 'Freeman', sans-serif;
+    font-size: 2.5rem; 
+    text-align: center; 
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    border-bottom: 0.25rem solid var(--red);
+   }
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1rem 0 1rem;
+    flex-wrap: wrap;
+   }
+
+.filter-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+input[type="text"], input[type="date"] {
+    font-family: 'Freeman', sans-serif;
+    padding: 0.8rem;
+    margin: 0.3rem;
+    flex-grow: 1;
+    min-width: 10rem;
+    max-width: 20rem;
+    border: 0.1rem solid var(--blue);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:hover, input[type="date"]:hover {
+    transform: translateY(-0.1rem);
+    border-color: var(--red);
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card {
+    background-color: var(--red);
+    border: 0.125rem solid var(--dark-grey);
+    box-shadow: 0.25rem 0.25rem var(--dark-grey);
+    padding: 1.2rem; 
+    border-radius: 0.625rem; 
+    width: 80%; 
+    max-width: 40rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 0.75rem rgba(0, 0, 0, 0.4);
+}
+
+.card h2, .card h3, .card p {
+    font-family: 'Freeman', sans-serif;
+    margin: 0;
+    color: white;
+}

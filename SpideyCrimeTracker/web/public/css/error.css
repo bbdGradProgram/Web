@@ -1,0 +1,41 @@
+@import url('../css/main.css');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.error-page-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: conic-gradient(var(--blue) 0deg 101deg, var(--red) 101deg 281deg, var(--blue) 281deg 360deg);
+    color: white;
+}
+
+.spider-man-face-palm-image {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.error-title {
+    font-size: calc(3vw + 1em);
+}
+
+.go-home-button {
+    background-color: white;
+    border: none;
+    color: var(--red);
+    font-size: calc(0.5vw + 1em);
+    padding: 0.625em;
+    border-top-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    cursor: pointer;
+    font-weight: 600;
+}

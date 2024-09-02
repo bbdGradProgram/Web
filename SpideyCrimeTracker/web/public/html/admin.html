@@ -1,0 +1,68 @@
+<section id="navbar">
+    <button class="nav-link" onclick="showSection('add-area')">Add an Suburb</button>
+    <button class="nav-link" onclick="showSection('add-crime')">Add a Type of Crime</button>
+    <button class="nav-link" onclick="showSection('user-info')">Edit User</button>
+</section>
+
+<section id="welcomeMessage">
+    <h1>Hey There, Spider-Friend! Welcome to Your Web-Crafting Workshop!</h1>
+    <p>Get ready to spin new threads as you add areas, detail dastardly deeds, and empower agents in the field. </p>
+    <p>Your toolkit is loaded with features that make you the master of web-slinging efficiency.</p>
+    <p> Let’s keep our city safe and data tidy, one click at a time!</p>
+</section>
+
+<section id="content">
+    <section id="add-area" class="content-section">
+        <form id="areaForm">
+            <section class="form-group area">
+                <input type="text" name="area" id="area" placeholder="Suburb"/>
+            </section>
+            <section class="form-group province">
+                <select name="province" id="province" class="dropdown">
+                    <option value="" selected disabled>Select a Province</option>
+                </select>
+            </section>
+            <section class="form-group submit-btn">
+                <input type="submit" value="Submit">
+            </section>
+        </form>
+    </section>
+
+    <section id="add-crime" class="content-section">
+        <form id="crimeForm">
+            <section class="form-group crime-type">
+                <input type="text" name="crime-type" id="crime-type" placeholder="Type of Crime"/>
+            </section>
+            <section class="form-group submit-btn">
+                <input type="submit" value="Submit">
+            </section>
+        </form>
+    </section>
+
+
+    <section id="user-info" class="content-section">
+        <form id="userTypeForm">
+
+            <section class="form-group user-name">
+                <select name="user-name" id="user-name" class="dropdown">
+                    <option value="" selected disabled>Select a Username</option>
+                </select>
+            </section>
+
+            <section class="form-group user-type">
+                <select name="user-type" id="user-type" class="dropdown">
+                    <option value="" selected disabled>Select a Role</option>
+                </select>
+            </section>
+
+
+            <section class="form-group submit-btn">
+                <input type="submit" value="Submit">
+            </section>
+        </form>
+    </section>
+
+    <h2 class="response-message"></h2>
+
+</section>
+

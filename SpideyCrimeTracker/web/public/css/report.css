@@ -1,0 +1,121 @@
+@import url('../css/main.css');
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+
+body {
+  background-image: url('../images/spiderman-swing-wallpaper.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: auto;
+}
+
+.header-container {
+  width: 100%;
+  margin-top: -20px;
+  text-align: center;
+}
+
+.header-text {
+  font-family: 'Freeman', sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+  padding: 20px 10px;
+  width: 100%;
+}
+
+.header-image {
+  width: 3rem;
+  height: auto;
+  opacity: 0.8;
+  display: block;
+  margin: 10px auto;
+}
+
+.form-container {
+  background: var(--red);
+  border-radius: 0.3125rem;
+  border: 0.125rem solid var(--dark-grey);
+  box-shadow: 0.25rem 0.25rem var(--dark-grey);
+  background-image: url('../images/cobweb.jpg');
+  background-size: 4rem auto;
+  background-position: top left;
+  background-repeat: no-repeat;
+  margin: 1rem;
+  padding: 2rem;
+  width: 90%;
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: auto;
+}
+
+input,
+textarea,
+select,
+label {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+select {
+  font-family: 'Freeman', sans-serif;
+  border: 1px solid var(--blue);
+  border-radius: 0.3rem;
+  height: 3.2rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  box-shadow: 0.25rem 0.25rem var(--dark-grey);
+  border: 0.125rem solid var(--dark-grey);
+}
+
+input[type=submit], textarea[type=submit] {
+  font-family: 'Freeman', sans-serif;
+  background-color: var(--blue);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  height: 4rem;
+}
+
+option {
+  font-size: 0.8rem;
+}
+
+textarea {
+  height: 8rem;
+}
+
+label {
+  font-weight: 500;
+  padding: 1rem 0 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.error-text {
+  color: white;
+  font-family: 'Freeman', sans-serif;
+}
+
+form textarea.error,
+form input.error,
+form select.error {
+  font-family: 'Freeman', sans-serif;
+  border-width: 0.3rem;
+  border-color: var(--blue);
+}
